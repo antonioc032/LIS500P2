@@ -16,6 +16,10 @@ h1 {
   text-align: center; /* Centers h1*/
 }
 
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+
 p {
   line-height: 1.6; /* Makes line spacing bigger so it's easier to read AC*/
 }
