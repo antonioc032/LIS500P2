@@ -37,3 +37,8 @@ p {
   gap: 30px; /* Puts a gap between the links AC*/
   list-style: none; /* Gets rid of the bullets AC*/
 }
+
+main {
+  max-width: 1000px; /* Makes it so the text doesn't go across the whole screen AC*/
+  padding: 15px; /* Adds some space inside the element AC*/
+}
