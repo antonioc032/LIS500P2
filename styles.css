@@ -36,6 +36,7 @@ p {
   display: flex; /* Makes links horizontal AC*/
   gap: 30px; /* Puts a gap between the links AC*/
   list-style: none; /* Gets rid of the bullets AC*/
+  justify-content: center; /* Center aligns the links AC*/
 }
 
 main {
