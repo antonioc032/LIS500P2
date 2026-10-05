@@ -22,3 +22,13 @@ h1 {
 .Amelia-head {
   color: #2EBFA5; /* Makes headers with this class the Ocean Mist color*/
 }
+
+.site-nav {
+  padding: 15px; /* Adds space inside the navigation bar so it gives the links room*/
+}
+
+.site-nav ul {
+  display: flex; /* Makes links horizontal*/
+  gap: 30px; /* Puts a gap between the links*/
+  list-style: none; /* Gets rid of the bullets*/
+}
