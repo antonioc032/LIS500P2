@@ -46,3 +46,18 @@ main {
 .index {
   text-align: center; /* Aligns text on index page to center AC*/
 }
+
+.welcome {
+  padding: 50px;
+}
+
+.site-nav {
+  backgroundcolor: #3083DC;
+  padding: 20px;
+}
+
+.hero {
+  background color: 2EBFA5;
+  text-align: center;
+  padding: 50px;
+}
