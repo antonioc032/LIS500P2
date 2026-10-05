@@ -42,3 +42,7 @@ p {
 main {
   padding: 15px; /* Adds some space inside the element AC*/
 }
+
+.index {
+  text-align: center;
+}
