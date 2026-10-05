@@ -8,32 +8,32 @@
 */
 
 body {
-  background-color: #F8FFE5; /* Makes the background of the pages a light yellow*/
+  background-color: #F8FFE5; /* Makes the background of the pages a light yellow AC*/
 }
 
 h1 {
-  color: #4E4187; /* Makes h1 have Dusty Grape color*/
+  color: #4E4187; /* Makes h1 have Dusty Grape color AC*/
   text-align: center; /* Centers h1*/
 }
 
 p {
-  line-height: 1.6; /* Makes line spacing bigger so it's easier to read*/
+  line-height: 1.6; /* Makes line spacing bigger so it's easier to read AC*/
 }
 
 .Antonio-head {
-  color: #3083DC; /* Makes headers with this class the Brilliant Azure color*/
+  color: #3083DC; /* Makes headers with this class the Brilliant Azure color AC*/
 }
 
 .Amelia-head {
-  color: #2EBFA5; /* Makes headers with this class the Ocean Mist color*/
+  color: #2EBFA5; /* Makes headers with this class the Ocean Mist color AC*/
 }
 
 .site-nav {
-  padding: 15px; /* Adds space inside the navigation bar so it gives the links room*/
+  padding: 15px; /* Adds space inside the navigation bar so it gives the links room AC*/
 }
 
 .site-nav ul {
-  display: flex; /* Makes links horizontal*/
-  gap: 30px; /* Puts a gap between the links*/
-  list-style: none; /* Gets rid of the bullets*/
+  display: flex; /* Makes links horizontal AC*/
+  gap: 30px; /* Puts a gap between the links AC*/
+  list-style: none; /* Gets rid of the bullets AC*/
 }
