@@ -7,17 +7,23 @@
   Ocean Mist: #2EBFA5
 */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 .about-us, .resources, .tech-heroes {
   background-color: #F8FFE5; /* Makes the background of the pages a light yellow AC*/
 }
 
 h1 {
   color: #4E4187; /* Makes h1 have Dusty Grape color AC*/
-  text-align: center; /* Centers h1*/
+  text-align: center; /* Centers h1 AC*/
+}
+
+body {
+  font-family: 'DM Sans', sans-serif; /* changes font of body text AC*/
 }
 
 h1, h2, h3 {
-  font-family: Georgia, serif;
+  font-family: 'Space Grotesk', sans-serif; /*changes font of headers AC*/
 }
 
 p {
@@ -32,10 +38,6 @@ p {
   color: #2EBFA5; /* Makes headers with this class the Ocean Mist color AC*/
 }
 
-.site-nav {
-  padding: 15px; /* Adds space inside the navigation bar so it gives the links room AC*/
-}
-
 .site-nav ul {
   display: flex; /* Makes links horizontal AC*/
   gap: 30px; /* Puts a gap between the links AC*/
@@ -43,8 +45,18 @@ p {
   justify-content: center; /* Center aligns the links AC*/
 }
 
-main {
-  padding: 15px; /* Adds some space inside the element AC*/
+.site-nav {
+  background-color: #3083DC; /*background color for links block on home AC*/
+  padding: 50px 20px; 
+}
+
+.site-nav a {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.site-nav a:hover {
+  transform: scale(1.1); /*Makes nav buttons grow when hovered over AC*/
 }
 
 .index {
@@ -55,13 +67,61 @@ main {
   padding: 50px;
 }
 
-.site-nav {
-  backgroundcolor: #3083DC;
-  padding: 20px;
+.welcome {
+  background-color: #F8FFE5; /*background color for Welcome block AC*/
 }
 
 .hero {
-  background color: 2EBFA5;
+  background-color: #2EBFA5; /*background color for bottom section of home AC*/
   text-align: center;
-  padding: 50px;
+  padding: 50px 50px 400px;
+}
+
+p a:hover {
+  color: red; /* links are red when hovered over AC*/
+}
+
+a:visited {
+  color: #4E4187; /*visited links turn purple AC*/
+}
+
+a:link {
+  color: blue /*default link color AC*/
+}
+
+body {
+  margin: 0;
+}
+
+.nav-button {
+  background-color: #7DDE92; /*home button colors AC*/
+  padding: 10px 20px;
+  text-decoration: none; /*gets rid of bullets AC*/
+  border-radius: 5px;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 5px 500px 25px 500px;
+}
+
+img {
+  display: block;
+  margin: 0 auto; /*center aligns AC*/
+  padding: 5px 50px;
+  height: 500px;
+}
+
+.Allison-title {
+  text-align: center;
+  padding: 5px 50px;
+}
+
+.hero-links {
+  list-style: none; /*gets rid of bullets AC*/
+  text-align: center;
+}
+
+.hero-links a:hover {
+color: red; /*hovered over links are red AC*/
 }
