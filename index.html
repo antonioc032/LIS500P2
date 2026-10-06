@@ -1,127 +1,37 @@
-/*
-  Color Pallette AC
-  Light Yellow/background: #F8FFE5
-  Dusty Grape: #4E4187
-  Brilliant Azure: #3083DC
-  Light Green: #7DDE92
-  Ocean Mist: #2EBFA5
-*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project #2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+	
+<!-- This is the splash/welcome page AR -->
+<body class="index"> 
+	<!-- The main header and first impression of the website AR -->
+	<header class="welcome">
+	    <h1>Welcome!</h1>
+	    <h3>Antonio and Amelia's Code & Power website</h3> <!--Smaller header to distinguish from the actual title AC-->
+	</header>
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Space+Grotesk:wght@500;600;700&display=swap');
-
-.about-us, .resources, .tech-heroes {
-  background-color: #F8FFE5; /* Makes the background of the pages a light yellow AC*/
-}
-
-h1 {
-  color: #4E4187; /* Makes h1 have Dusty Grape color AC*/
-  text-align: center; /* Centers h1 AC*/
-}
-
-body {
-  font-family: 'DM Sans', sans-serif; /* changes font of body text AC*/
-}
-
-h1, h2, h3 {
-  font-family: 'Space Grotesk', sans-serif; /*changes font of headers AC*/
-}
-
-p {
-  line-height: 1.6; /* Makes line spacing bigger so it's easier to read AC*/
-}
-
-.Antonio-head {
-  color: #3083DC; /* Makes headers with this class the Brilliant Azure color AC*/
-}
-
-.Amelia-head {
-  color: #2EBFA5; /* Makes headers with this class the Ocean Mist color AC*/
-}
-
-.site-nav ul {
-  display: flex; /* Makes links horizontal AC*/
-  gap: 30px; /* Puts a gap between the links AC*/
-  list-style: none; /* Gets rid of the bullets AC*/
-  justify-content: center; /* Center aligns the links AC*/
-}
-
-.site-nav {
-  background-color: #3083DC; /*background color for links block on home AC*/
-  padding: 50px 20px; 
-}
-
-.site-nav a {
-  display: inline-block;
-  transition: transform 0.2s;
-}
-
-.site-nav a:hover {
-  transform: scale(1.1); /*Makes nav buttons grow when hovered over AC*/
-}
-
-.index {
-  text-align: center; /* Aligns text on index page to center AC*/
-}
-
-.welcome {
-  padding: 50px;
-}
-
-.welcome {
-  background-color: #F8FFE5; /*background color for Welcome block AC*/
-}
-
-.hero {
-  background-color: #2EBFA5; /*background color for bottom section of home AC*/
-  text-align: center;
-  padding: 50px 50px 400px;
-}
-
-p a:hover {
-  color: red; /* links are red when hovered over AC*/
-}
-
-a:visited {
-  color: #4E4187; /*visited links turn purple AC*/
-}
-
-a:link {
-  color: blue /*default link color AC*/
-}
-
-body {
-  margin: 0;
-}
-
-.nav-button {
-  background-color: #7DDE92; /*home button colors AC*/
-  padding: 10px 20px;
-  text-decoration: none; /*gets rid of bullets AC*/
-  border-radius: 5px;
-}
-
-.hero-text {
-  text-align: center;
-  padding: 5px 500px 25px 500px;
-}
-
-img {
-  display: block;
-  margin: 0 auto; /*center aligns AC*/
-  padding: 5px 50px;
-  height: 500px;
-}
-
-.Allison-title {
-  text-align: center;
-  padding: 5px 50px;
-}
-
-.hero-links {
-  list-style: none; /*gets rid of bullets AC*/
-  text-align: center;
-}
-
-.hero-links a:hover {
-color: red; /*hovered over links are red AC*/
-}
+	<!-- The navigation bar AR -->
+    <nav aria-label="Main navigation" class="site-nav">
+        <ul>
+			<!-- Link to the About Us page AR -->
+            <li><a class="nav-button" href="aboutus.html">About Us</a></li> <!--Class so we can style the specific buttons AC-->
+			<!-- Link to the resources page AR -->
+            <li><a class="nav-button" href="resources.html">Resources</a></li> <!--Class so we can style the specific buttons AC-->
+			<!-- Link to the tech heroes page AR -->
+            <li><a class="nav-button" href="techheroes.html">Tech Heroes</a></li> <!--Class so we can style the specific buttons AC-->
+        </ul>
+    </nav>
+    <main>
+		<!-- This is the subheader AR -->
+        <section class="hero">
+		  <div class="hero-content container">
+		    <h2>Get to know us and our takes on tech and intersectionality</h2>
+		    <p class="hero-subhead">Follow along with us!</p>
+		  </div>
+    </main>
+</body>
+</html>
