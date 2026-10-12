@@ -72,9 +72,25 @@ p {
 }
 
 .hero {
-  background-color: #2EBFA5; /*background color for bottom section of home AC*/
+  background-color: #2EBFA5;
   text-align: center;
-  padding: 50px 50px 400px;
+  padding: 80px 30px;
+}
+
+.hero-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #4E4187;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+footer p {
+  margin: 5px;
 }
 
 p a:hover {
