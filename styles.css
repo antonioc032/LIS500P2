@@ -321,3 +321,17 @@ color: red; /*hovered over links are red AC*/
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
+
+.resources h1 {
+  color: #4E4187;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.resources > h3 {
+  text-align: center;
+  color: #3083DC;
+  margin: 15px auto 40px;
+  max-width: 650px;
+  padding: 0 20px;
+}
