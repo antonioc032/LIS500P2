@@ -312,3 +312,12 @@ color: red; /*hovered over links are red AC*/
   margin: 0 auto;
   line-height: 1.8;
 }
+
+.definition-box {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 750px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
