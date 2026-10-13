@@ -297,3 +297,18 @@ color: red; /*hovered over links are red AC*/
     width: 100%;
   }
 }
+.intersectionality-section {
+  background-color: #2EBFA5;
+  text-align: center;
+  padding: 50px 30px;
+}
+
+.intersectionality-section h2 {
+  color: #4E4187;
+}
+
+.intersectionality-section p {
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
