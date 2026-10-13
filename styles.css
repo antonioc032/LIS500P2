@@ -344,3 +344,9 @@ color: red; /*hovered over links are red AC*/
   max-width: 650px;
   padding: 0 20px;
 }
+
+/* Naser's name and Tech Hero heading use the existing Grape color NE */
+.Naser-head {
+  color: #4E4187;
+  text-align: center;
+}
