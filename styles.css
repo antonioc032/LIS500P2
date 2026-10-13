@@ -194,3 +194,104 @@ img {
 .hero-links a:hover {
 color: red; /*hovered over links are red AC*/
 }
+/* Tech Heroes Page Heading */
+.heroes-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #F8FFE5;
+}
+
+.heroes-header h1 {
+  color: #4E4187;
+  font-size: 36px;
+}
+
+.heroes-header p {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Container for Both Heroes */
+.heroes-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Hero Cards */
+.hero-card {
+  background-color: white;
+  width: 400px;
+  max-width: 100%;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* Tech Hero Names */
+.hero-card h2 {
+  text-align: center;
+  font-size: 26px;
+}
+
+/* Hero Images */
+.hero-card img {
+  display: block;
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+/* Description Paragraphs */
+.hero-card p {
+  text-align: left;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* Links */
+.hero-card .hero-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.hero-card .hero-links li {
+  margin-bottom: 12px;
+}
+
+.hero-card .hero-links a {
+  color: #4E4187;
+  font-weight: bold;
+}
+
+.hero-card .hero-links a:hover {
+  color: #3083DC;
+  text-decoration: underline;
+}
+
+/* Hover Effect on Cards */
+.hero-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* Smaller Screen Layout */
+@media (max-width: 600px) {
+  .heroes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+}
