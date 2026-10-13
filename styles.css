@@ -336,9 +336,10 @@ color: red; /*hovered over links are red AC*/
   padding: 0 20px;
 }
 
-.resource >h2 {
+.resources-subtitle {
   text-align: center;
   color: #3083DC;
+  font-size: 18px;
   margin: 15px auto 40px;
   max-width: 650px;
   padding: 0 20px;
