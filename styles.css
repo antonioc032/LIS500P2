@@ -335,3 +335,11 @@ color: red; /*hovered over links are red AC*/
   max-width: 650px;
   padding: 0 20px;
 }
+
+.resource >h2 {
+  text-align: center;
+  color: #3083DC;
+  margin: 15px auto 40px;
+  max-width: 650px;
+  padding: 0 20px;
+}
