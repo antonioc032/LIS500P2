@@ -32,10 +32,24 @@ p {
 
 .Antonio-head {
   color: #3083DC; /* Makes headers with this class the Brilliant Azure color AC*/
+  text-align: center;
 }
 
 .Amelia-head {
   color: #2EBFA5; /* Makes headers with this class the Ocean Mist color AC*/
+  text-align: center;
+}
+
+.bio { 
+  text-align: center; /* Center aligns AC*/
+  max-width: 700px; 
+  margin: 0 auto 50px; /* Gives space on the sides and below the bios while keeping center aligned AC*/
+}
+
+.about-image {
+  width: 450px;
+  height: auto;
+  margin: 80px auto 25px; /* Margin for spacing out the page AC*/
 }
 
 .site-nav ul {
