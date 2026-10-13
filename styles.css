@@ -194,7 +194,7 @@ img {
 .hero-links a:hover {
 color: red; /*hovered over links are red AC*/
 }
-/* Tech Heroes Page Heading */
+/* Tech Heroes Page Heading AR */
 .heroes-header {
   text-align: center;
   padding: 40px 20px;
@@ -212,7 +212,9 @@ color: red; /*hovered over links are red AC*/
   margin: 0 auto;
 }
 
-/* Container for Both Heroes */
+/* Container for Both Heroes AR*/
+/* Places both tech hero cards next to each other AR*/
+/* Creates space between cards AR*/
 .heroes-container {
   display: flex;
   justify-content: center;
