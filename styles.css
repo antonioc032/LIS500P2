@@ -350,3 +350,17 @@ color: red; /*hovered over links are red AC*/
   color: #4E4187;
   text-align: center;
 }
+
+/* ASL Classifier Page */
+.asl-classifier {
+    text-align: center;
+    margin: 30px auto;
+}
+
+/* Camera display */
+.classifier-canvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+}
