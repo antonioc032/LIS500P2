@@ -5,12 +5,14 @@
     <title>Teachable Machines</title>
     <!--Links the style sheet to this page-->
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
 </head>
 
 <!-- This page includes our practice with machine learning using original images to teach a machine -->
 <body class="machine-learning">
 
-        <nav aria-label="Main navigation" class="site-nav">
+    <nav aria-label="Main navigation" class="site-nav">
         <!--unordered list of buttons for navigating the website AC-->
         <ul>
             <!--Button to the home/index page AC-->
@@ -23,3 +25,66 @@
             <li><a class="nav-button" href="aboutus.html">About Us</a></li>
         </ul>
     </nav>
+    <main class="asl-classifier">
+    <h1>ASL Alphabet Classifier</h1>
+
+    <div id="classifier-container"></div>
+</main>
+<script>
+// Add some header info
+// For TM template code
+
+// Video
+let video;
+
+let label = 'waiting...';
+
+let classifier;
+
+// STEP 1: Load the model!
+function preload() {
+    classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/ULwYQRoGu/')
+}
+
+function setup() {
+  let canvas = createCanvas(640, 520);
+    canvas.parent('classifier-container');
+    canvas.addClass('classifier-canvas');
+  // Create the video
+  video = createCapture(VIDEO);
+  video.hide();
+
+  // STEP 2: Start classifying
+  classifyVideo();
+}
+
+// STEP 2 classify!
+function classifyVideo() {
+    classifier.classify(video, gotResults);
+}
+
+function draw() {
+  background(0);
+  
+  // Draw the video
+  image(video, 0, 0);
+
+  // STEP 4: Draw the label
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  fill(255);
+  text(label, width/2, height - 16);
+}
+
+
+// STEP 3: Get the classification!
+function gotResults(error, results) {
+    if(error) {
+        console.error(error);
+        return;
+    }
+    label = results[0].label;
+    classifyVideo();
+}
+
+</script>
