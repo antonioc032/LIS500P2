@@ -384,3 +384,40 @@ color: red; /*hovered over links are red AC*/
 #camera-toggle:hover {
     background-color: #3083DC;
 }
+
+/* Spelling Section */
+.spelling-section {
+    background-color: white;
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.spelling-section h2 {
+    color: #4E4187;
+}
+
+#spelling-toggle, #clear-letters {
+    background-color: #4E4187;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#spelling-toggle:hover,
+#clear-letters:hover {
+    background-color: #3083DC;
+}
+
+#spelled-letters {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4E4187;
+    min-height: 35px;
+    margin: 15px;
+}
