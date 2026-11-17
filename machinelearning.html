@@ -58,7 +58,6 @@
     Turn Camera On
     </button>
 
-<div id="classifier-container"></div>
     <!-- Classifier camera -->
     <div id="classifier-container"></div>
 </main>
@@ -73,44 +72,40 @@ let label = 'waiting...';
 
 let classifier;
 
+let cameraOn = false;
+
 // STEP 1: Load the model!
 function preload() {
-    classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/ULwYQRoGu/');
     classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/aczUwUOIf/');
 }
 
 function setup() {
-  let canvas = createCanvas(640, 520);
+    let canvas = createCanvas(640, 520);
     canvas.parent('classifier-container');
     canvas.addClass('classifier-canvas');
-  // Create the video
-  video = createCapture(VIDEO);
-  video.hide();
-
-  // STEP 2: Start classifying
-  classifyVideo();
 }
 
 function toggleCamera() {
     if (!cameraOn) {
-        // Turn camera on
-        video = createCapture(VIDEO);
-        video.hide();
+        video = createCapture(VIDEO, function() {
+            video.hide();
+            label = 'Waiting...';
+            classifyVideo();
+        });
 
         cameraOn = true;
-        label = 'Waiting...';
 
         document.getElementById('camera-toggle').textContent = 'Turn Camera Off';
 
-        classifyVideo();
-
     } else {
-        // Turn camera off
-        video.stop();
-        video.remove();
-        video = null;
-
         cameraOn = false;
+
+        if (video) {
+            video.elt.srcObject.getTracks().forEach(track => track.stop());
+            video.remove();
+            video = null;
+        }
+
         label = 'Camera is off';
 
         document.getElementById('camera-toggle').textContent = 'Turn Camera On';
@@ -119,31 +114,35 @@ function toggleCamera() {
 
 // STEP 2 classify!
 function classifyVideo() {
-    classifier.classify(video, gotResults);
+    if (cameraOn && video) {
+        classifier.classify(video, gotResults);
+    }
 }
 
 function draw() {
-  background(0);
-  
-  // Draw the video
-  image(video, 0, 0);
+    background(0);
 
-  // STEP 4: Draw the label
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  fill(255);
-  text(label, width/2, height - 16);
+    if (cameraOn && video && video.elt.readyState >= 2) {
+        image(video, 0, 0, width, height);
+    }
+
+    // STEP 4: Draw the label
+    textSize(32);
+    textAlign(CENTER, CENTER);
+    fill(255);
+    text(label, width/2, height - 16);
 }
-
 
 // STEP 3: Get the classification!
 function gotResults(error, results) {
-    if(error) {
+    if (!cameraOn) return;
+
+    if (error) {
         console.error(error);
         return;
     }
+
     label = results[0].label;
     classifyVideo();
 }
-
 </script>
