@@ -54,7 +54,11 @@
             training AI models and the importance of continuously testing and improving their performance.
         </p>
     </div>
+    <button id="camera-toggle" onclick="toggleCamera()">
+    Turn Camera On
+    </button>
 
+<div id="classifier-container"></div>
     <!-- Classifier camera -->
     <div id="classifier-container"></div>
 </main>
@@ -85,6 +89,32 @@ function setup() {
 
   // STEP 2: Start classifying
   classifyVideo();
+}
+
+function toggleCamera() {
+    if (!cameraOn) {
+        // Turn camera on
+        video = createCapture(VIDEO);
+        video.hide();
+
+        cameraOn = true;
+        label = 'Waiting...';
+
+        document.getElementById('camera-toggle').textContent = 'Turn Camera Off';
+
+        classifyVideo();
+
+    } else {
+        // Turn camera off
+        video.stop();
+        video.remove();
+        video = null;
+
+        cameraOn = false;
+        label = 'Camera is off';
+
+        document.getElementById('camera-toggle').textContent = 'Turn Camera On';
+    }
 }
 
 // STEP 2 classify!
