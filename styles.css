@@ -365,3 +365,22 @@ color: red; /*hovered over links are red AC*/
     margin-right: auto;
     border-radius: 12px;
 }
+/* Camera Toggle Button AC */
+#camera-toggle {
+    background-color: #4E4187;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Camera button hover effect AC */
+#camera-toggle:hover {
+    background-color: #3083DC;
+}
