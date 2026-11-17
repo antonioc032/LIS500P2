@@ -320,6 +320,7 @@ color: red; /*hovered over links are red AC*/
   max-width: 750px;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
 .resources h1 {
