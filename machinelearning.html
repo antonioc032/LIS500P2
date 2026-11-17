@@ -61,14 +61,15 @@
             still lacking in consistency. Once we got it to the current state, we decided to build on to it a bit more, instead of just reading sign language
             from the camera, it can now spell things out. Referencing the p5js website, we figured out how to use millis to record the most frequently recorded
             letter in a 2 second time frame and then display that letter. Every 2 seconds it adds the most frequent letter withing that time frame until whatever
-            the user intends to spell is listed. One lesson from "Unmasking AI", is that projects such as this should be accessible to people other than just the 
-            person who created it. In order for us to make our machine as accessible as possible, we made sure our data included signs for both the left 
-            and right hands. Our data also contains photos of varying camera qualities, which could assist in making sure the machine recognizes hand 
-            signs from people without access to top tier technology. Another lesson from Buolamwini is how innacurate AI systems can have a negative 
-            impact on people and those systems should always be questioned. If an AI with the same design and accuracy as ours were to be used in a more
-            important context, such as translating for someone who needs it, it would not be able to give results that a person could rely on. Since we
-            are aware our machine cannot, in it's current state, give 100% accurate results, we have made sure to explicitly state how and why that is the 
-            case here.  
+            the user intends to spell is listed. The main drawback of this feature is the camera and spelling section span across a good amount of screen space.
+            Because of this, in it's current form, the spelling feature may only be available to computers or those with large enough screens on their devices.
+            One lesson from "Unmasking AI", is that projects such as this should be accessible to people other than just the person who created it. In order 
+            for us to make our machine as accessible as possible, we made sure our data included signs for both the left and right hands. Our data also 
+            contains photos of varying camera qualities, which could assist in making sure the machine recognizes hand signs from people without access to 
+            top tier technology. Another lesson from Buolamwini is how innacurate AI systems can have a negative impact on people and those systems should 
+            always be questioned. If an AI with the same design and accuracy as ours were to be used in a more important context, such as translating for 
+            someone who needs it, it would not be able to give results that a person could rely on. Since we are aware our machine cannot, in it's current 
+            state, give 100% accurate results, we have made sure to explicitly state how and why that is the case here.  
         </p>
     </div>
     <button id="camera-toggle" onclick="toggleCamera()">
