@@ -28,50 +28,6 @@
     <main class="asl-classifier">
     <h1>ASL Alphabet Classifier</h1>
 
-    <!-- Project statement -->
-    <div class="definition-box">
-        <p>
-            <strong>Project Statement:</strong>
-            <!-- AR -->
-            This process required our group members to gather original data by modeling the ASL alphabet to program the machine to recognize each letter.
-            The goal was for the machine to easily identify the letter that the user portrays to the camera. We aimed to gather enough data, usually 
-            300–400 pictures per letter, so that the machine had a large variety of examples in the database to assist in differentiating the signs. 
-            Throughout this process, each group member contributed to collecting images of different letters, allowing us to build a larger and more 
-            diverse data set. We initially expected that once the machine was trained, it would be able to recognize the different hand gestures with a
-            relatively high level of accuracy. When first testing the Teachable Machine, we quickly realized that not enough data was collected for each 
-            letter. This led to an unreliable machine that could not easily identify the ASL signs. It was critical for us to capture more data and make 
-            note of the lighting, background, and other elements that could interfere with the capturing of the data. We recognized that even small changes 
-            in the positioning of our hands or the angle of the camera could impact the machine's ability to accurately identify the letters. One example 
-            was ensuring that we had data that gave both left and right handed people representation in the system. This demonstrated the importance of 
-            collecting a diverse range of images rather than repeatedly capturing the same hand gesture from one position. After ensuring that each sign 
-            had over 300 photos, the system demonstrated more coherence but continued to struggle to differentiate signs that appear similar. ASL letters 
-            such as "A", "E", and "S" are very similar with slight differences, and the system failed to consistently identify those differences. The same 
-            setback occurred with "M", "N", and "T", which have similar hand positioning but represent completely different letters. Although the machine 
-            became more reliable as we increased the amount of training data, it was clear that the quantity of images did not necessarily guarantee 
-            accurate results. This process demonstrated how important the quality and variety of training data are when developing a machine learning 
-            system. While the Teachable Machine was able to recognize several ASL letters, its limitations highlighted how difficult it can be for AI to 
-            identify subtle differences that humans can more easily recognize. This experience helped our group better understand the challenges of 
-            training AI models and the importance of continuously testing and improving their performance.
-            <!-- AC -->
-            Once those lessons were clear, our main method for improving the accuracy was more pictures. The more pictures we have with as many different 
-            angles, distances, camera quality, lighting, the more accurate the AI can get. We decided to attempt to just about double the sample size we 
-            used in the previous iteration of the machine and see if that helped in deciphering letters with similar hand gestures. That is where we have
-            gotten in our most recent version of the machine. The current iteration of the machine uses over 700 pictures for each letter in order to get 
-            as close to accurate as we can for as much of the alphabet as possible. It is able to differentiate certain letters it could not before, but is 
-            still lacking in consistency. Once we got it to the current state, we decided to build on to it a bit more, instead of just reading sign language
-            from the camera, it can now spell things out. Referencing the p5js website, we figured out how to use millis to record the most frequently recorded
-            letter in a 2 second time frame and then display that letter. Every 2 seconds it adds the most frequent letter withing that time frame until whatever
-            the user intends to spell is listed. The main drawback of this feature is the camera and spelling section span across a good amount of screen space.
-            Because of this, in it's current form, the spelling feature may only be available to computers or those with large enough screens on their devices.
-            One lesson from "Unmasking AI", is that projects such as this should be accessible to people other than just the person who created it. In order 
-            for us to make our machine as accessible as possible, we made sure our data included signs for both the left and right hands. Our data also 
-            contains photos of varying camera qualities, which could assist in making sure the machine recognizes hand signs from people without access to 
-            top tier technology. Another lesson from Buolamwini is how innacurate AI systems can have a negative impact on people and those systems should 
-            always be questioned. If an AI with the same design and accuracy as ours were to be used in a more important context, such as translating for 
-            someone who needs it, it would not be able to give results that a person could rely on. Since we are aware our machine cannot, in it's current 
-            state, give 100% accurate results, we have made sure to explicitly state how and why that is the case here.  
-        </p>
-    </div>
     <button id="camera-toggle" onclick="toggleCamera()">
     Turn Camera On
     </button>
@@ -261,3 +217,56 @@ function recordLetter() {
     letterPredictions = [];
 }
 </script>
+     <!-- Project statement -->
+    <div class="definition-box">
+        <p>
+            <strong>Project Statement:</strong>
+            <!-- AR -->
+            This process required our group members to gather original data by modeling the ASL alphabet to program the machine to recognize each letter.
+            The goal was for the machine to easily identify the letter that the user portrays to the camera. We aimed to gather enough data, usually 
+            300–400 pictures per letter, so that the machine had a large variety of examples in the database to assist in differentiating the signs. 
+            Throughout this process, each group member contributed to collecting images of different letters, allowing us to build a larger and more 
+            diverse data set. We initially expected that once the machine was trained, it would be able to recognize the different hand gestures with a
+            relatively high level of accuracy. When first testing the Teachable Machine, we quickly realized that not enough data was collected for each 
+            letter. This led to an unreliable machine that could not easily identify the ASL signs. It was critical for us to capture more data and make 
+            note of the lighting, background, and other elements that could interfere with the capturing of the data. We recognized that even small changes 
+            in the positioning of our hands or the angle of the camera could impact the machine's ability to accurately identify the letters. One example 
+            was ensuring that we had data that gave both left and right handed people representation in the system. This demonstrated the importance of 
+            collecting a diverse range of images rather than repeatedly capturing the same hand gesture from one position. After ensuring that each sign 
+            had over 300 photos, the system demonstrated more coherence but continued to struggle to differentiate signs that appear similar. ASL letters 
+            such as "A", "E", and "S" are very similar with slight differences, and the system failed to consistently identify those differences. The same 
+            setback occurred with "M", "N", and "T", which have similar hand positioning but represent completely different letters. Although the machine 
+            became more reliable as we increased the amount of training data, it was clear that the quantity of images did not necessarily guarantee 
+            accurate results. This process demonstrated how important the quality and variety of training data are when developing a machine learning 
+            system. While the Teachable Machine was able to recognize several ASL letters, its limitations highlighted how difficult it can be for AI to 
+            identify subtle differences that humans can more easily recognize. This experience helped our group better understand the challenges of 
+            training AI models and the importance of continuously testing and improving their performance.
+            <!-- AC -->
+            Once those lessons were clear, our main method for improving the accuracy was more pictures. The more pictures we have with as many different 
+            angles, distances, camera quality, lighting, the more accurate the AI can get. We decided to attempt to just about double the sample size we 
+            used in the previous iteration of the machine and see if that helped in deciphering letters with similar hand gestures. That is where we have
+            gotten in our most recent version of the machine. The current iteration of the machine uses over 700 pictures for each letter in order to get 
+            as close to accurate as we can for as much of the alphabet as possible. It is able to differentiate certain letters it could not before, but is 
+            still lacking in consistency. Once we got it to the current state, we decided to build on to it a bit more, instead of just reading sign language
+            from the camera, it can now spell things out. Referencing the p5js website, we figured out how to use millis to record the most frequently recorded
+            letter in a 2 second time frame and then display that letter. Every 2 seconds it adds the most frequent letter withing that time frame until whatever
+            the user intends to spell is listed. The main drawback of this feature is the camera and spelling section span across a good amount of screen space.
+            Because of this, in it's current form, the spelling feature may only be available to computers or those with large enough screens on their devices.
+            One lesson from "Unmasking AI", is that projects such as this should be accessible to people other than just the person who created it. In order 
+            for us to make our machine as accessible as possible, we made sure our data included signs for both the left and right hands. Our data also 
+            contains photos of varying camera qualities, which could assist in making sure the machine recognizes hand signs from people without access to 
+            top tier technology. Another lesson from Buolamwini is how innacurate AI systems can have a negative impact on people and those systems should 
+            always be questioned. If an AI with the same design and accuracy as ours were to be used in a more important context, such as translating for 
+            someone who needs it, it would not be able to give results that a person could rely on. Since we are aware our machine cannot, in it's current 
+            state, give 100% accurate results, we have made sure to explicitly state how and why that is the case here. 
+            <! -- AR -->
+            To conclude, the lessons we have learned from 'Unmasking AI' have really resonated with us because it becomes aparent how AI systems can become biased based 
+            on why designs it and whose experiences are considered during development. Although our team has diverse representation, it is not enough to call this an 
+            unbiased system. This machie learning project is evidence that the data that goes into teaching a machine matters. Three people and their hands are not enough
+            to make this system accurate enough to apply in real world scenarios. Our project demonstrated that even when developers have good intentions, implicit biases 
+            can influence the decisions they make and the overall performance of their systems. Furthermore, the concept of intersectionality helped us undertsand that 
+            accesibility cannot be measured by how well the system works for one individual. Different identites and technological resources can impact how a user experiences 
+            the AI system. We learned that it is important to consider these differences throughout the entire development process rather than trying to fix it after the 
+            final design is made public and problems may arise. 
+        </p>
+    </div>
