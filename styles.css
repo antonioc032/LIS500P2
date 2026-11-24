@@ -429,6 +429,8 @@ color: red; /*hovered over links are red AC*/
 
 .video-container video {
     width: 100%;
+    aspect-ratio: 16 / 9;
     height: auto;
     display: block;
+    background: black;
 }
